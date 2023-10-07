@@ -11,3 +11,5 @@
 5. Design and implement an “adaptive learning rate” strategy, where the idea is to use larger steps at the beginning of the iterative process, and iteratively decrease them once the solution is close.
 
 6. Compare the computational/accuracy performance of the fixed vs adaptive learning rate strategies.
+
+7.
