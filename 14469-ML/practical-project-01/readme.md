@@ -19,7 +19,7 @@ features.
 according to gradient descent - ok
 
 4. Implement functions to obtain performance measures according to a “k-fold” validation
-scheme.
+scheme. Doing
 
 5. Analyze the differences in performance between the models obtained for the different
 folds.
