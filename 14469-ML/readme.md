@@ -10,3 +10,7 @@ Ian Goodfellow, and Yoshua Bengio, Deep Learning, MIT Press, 2016.
 Andrew Ng, Machine Learning Yearning, 2018.
 E. Alpaydin (2010). Introduction to Machine Learning, Second Edition, MIT Press.
 Scientific papers and extra materials provided by the teacher.
+
+Author: UBI
+
+Link: https://www.ubi.pt/Disciplina/14469/2022
