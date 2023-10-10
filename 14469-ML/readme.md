@@ -4,7 +4,7 @@
 4. Unsupervised Learning. Clustering Analysis. Partitioning methods. Probabilistic clustering methods. Fuzzy clustering methods. Hierarchical clustering methods. Self-organized maps.
 5. Selected applications. Control systems, recommendation systems and large-scale machine learning.
 
-Main Bibliography
+Main Bibliography:
 David Barber, Bayesian Reasoning and Machine Learning, Cambridge University Press, 2016.
 Ian Goodfellow, and Yoshua Bengio, Deep Learning, MIT Press, 2016.
 Andrew Ng, Machine Learning Yearning, 2018.
