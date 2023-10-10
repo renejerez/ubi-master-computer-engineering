@@ -428,8 +428,8 @@ def gradient_descent_houses(X, y, w_in, b_in, cost_function, gradient_function, 
     b = b_in
     save_interval = np.ceil(num_iters/10000) # prevent resource exhaustion for long runs
 
-    print(f"Iteration Cost          w0       w1       w2       w3       b       djdw0    djdw1    djdw2    djdw3    djdb  ")
-    print(f"---------------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|")
+    print(f"Iteration Cost          b     ")
+    print(f"---------------------|--------")
 
     for i in range(num_iters):
 
@@ -451,7 +451,7 @@ def gradient_descent_houses(X, y, w_in, b_in, cost_function, gradient_function, 
         if i% math.ceil(num_iters/10) == 0:
             #print(f"Iteration {i:4d}: Cost {cost_function(X, y, w, b):8.2f}   ")
             cst = cost_function(X, y, w, b)
-            print(f"{i:9d} {cst:0.5e} {w[0]: 0.1e} {w[1]: 0.1e} {w[2]: 0.1e} {w[3]: 0.1e} {b: 0.1e} {dj_dw[0]: 0.1e} {dj_dw[1]: 0.1e} {dj_dw[2]: 0.1e} {dj_dw[3]: 0.1e} {dj_db: 0.1e}")
+            print(f"{i:9d} {cst:0.5e}  {b: 0.1e}")
        
     return w, b, hist #return w,b and history for graphing
 
