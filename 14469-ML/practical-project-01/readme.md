@@ -19,10 +19,10 @@ features.
 according to gradient descent - ok
 
 4. Implement functions to obtain performance measures according to a “k-fold” validation
-scheme. Doing
+scheme. ok
 
 5. Analyze the differences in performance between the models obtained for the different
-folds.
+folds. ok
 
 6. Adapt the “linear_regression.py”script to fit a polynomial model (of order “p”) to your
 data. Repeat the analysis of step 5.
