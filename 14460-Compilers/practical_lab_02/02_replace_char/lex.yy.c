@@ -357,12 +357,35 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
+#line 1 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
 #define INITIAL 0
-#line 2 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
-/* Definitions */
-int letter_count = 0;
-#line 366 "lex.yy.c"
+#line 2 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_STRING_LENGTH 1024
+char input_string[MAX_STRING_LENGTH];
+char replacement_string[MAX_STRING_LENGTH];
+char old_string[MAX_STRING_LENGTH];
+int input_length = 0;
+int replace_length = 0;
+
+void replaceString() {
+    char output_string[MAX_STRING_LENGTH];
+    char* position = strstr(input_string, old_string);
+
+    while (position != NULL) {
+        int length = position - input_string;
+        strncpy(output_string, input_string, length);
+        output_string[length] = '\0';
+        strcat(output_string, replacement_string);
+        strcat(output_string, position + replace_length);
+        strcpy(input_string, output_string);
+        position = strstr(input_string, old_string);
+    }
+}
+
+#line 389 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -513,9 +536,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 6 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
+#line 29 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
 
-#line 519 "lex.yy.c"
+#line 542 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -600,25 +623,28 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
-{ letter_count++; }
+#line 30 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
+{ }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
-{/* Ignore all other characters */}
+#line 31 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
+{ input_string[input_length++] = yytext[0]; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 9 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
-{ printf("Number of letters in the input string: %d\n", letter_count); return 0; }
+#line 32 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
+{ 
+             input_string[input_length] = '\0';
+             return 0;
+          }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 10 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
+#line 36 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
 ECHO;
 	YY_BREAK
-#line 622 "lex.yy.c"
+#line 648 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1504,7 +1530,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 10 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\counter_char\\count_char.l"
+#line 36 "c:\\Users\\rene_\\01-Python\\ubi-master-computer-engineering\\14460-Compilers\\practical_lab_02\\02_replace_char\\replace_char.l"
 
 
 int yywrap() {
@@ -1512,7 +1538,15 @@ int yywrap() {
 }
 
 int main() {
-    printf("Enter a string: ");
-    yylex();
+    printf("Enter the string: ");
+    fgets(input_string, MAX_STRING_LENGTH, stdin);
+    input_length = strlen(input_string);
+    printf("Enter the old string: ");
+    scanf("%s", old_string);
+    printf("Enter the replacement string: ");
+    scanf("%s", replacement_string);
+    replace_length = strlen(old_string);
+    replaceString();
+    printf("Final string changed: %s\n", input_string);
     return 0;
 }
