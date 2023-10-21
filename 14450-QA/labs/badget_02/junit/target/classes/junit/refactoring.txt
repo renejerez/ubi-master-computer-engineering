@@ -1,3 +1,0 @@
-    if (b == 0) {        
-                throw new IllegalArgumentException("Cannot divide by zero");
-                        }
