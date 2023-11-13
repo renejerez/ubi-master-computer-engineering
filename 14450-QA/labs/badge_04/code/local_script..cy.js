@@ -1,22 +1,22 @@
 beforeEach(() => {
   // URL para todos os casos de teste
-  cy.visit('https://onpoint-hml.azurewebsites.net/login/simula-excelsior');
+  cy.visit('');
 })
 
 it('Criacao da Proposta', () => {
   // Login
-  cy.get(':nth-child(1) > .vs-component > .vs-con-input > .vs-inputx').type('opcao@opcao.com.br') // input usuario
-    .should('have.value', 'opcao@opcao.com.br'); // validar usuario
+  cy.get(':nth-child(1) > .vs-component > .vs-con-input > .vs-inputx').type('') // input usuario
+    .should('have.value', ''); // validar usuario
 
-  cy.get(':nth-child(2) > .vs-component > .vs-con-input > .vs-inputx').type('Teste123*') // input senha
-    .should('have.value', 'Teste123*'); // validar senha
+  cy.get(':nth-child(2) > .vs-component > .vs-con-input > .vs-inputx').type('') // input senha
+    .should('have.value', ''); // validar senha
 
   cy.get('form > .vs-button').click().wait(15000); // entrar
 
 
   // Nova Proposta
   cy.get('.nova-proposta-btn').should('be.visible').click();
-  cy.wrap('01.265.684/0001-16').as('cnpjTomador'); // input cnpj tomador
+  cy.wrap('').as('cnpjTomador'); // input cnpj tomador
 
   cy.get('@cnpjTomador').then(cnpjTomador => {
     cy.get('.multiselect__placeholder').should('be.visible').type(cnpjTomador);
@@ -37,7 +37,7 @@ it('Criacao da Proposta', () => {
 
     /* ==== Generated with Cypress Studio ==== */
     cy.get('#buscar-segurado').clear();
-    cy.get('#buscar-segurado').type('45.685.872/0001-79');
+    cy.get('#buscar-segurado').type('');
     //cy.get('.option__desc > :nth-child(3)').click();
     /* ==== End Cypress Studio ==== */
     cy.get('.dados-seguradora > .vx-row > .mt-5 > .multiselect > .multiselect__tags').should('be.visible');
