@@ -25,8 +25,6 @@ tf.random.set_seed(SEED_VALUE)
 #	FX
 # ##########################################################################
 
-
-
 def plot_results(metrics, title=None, ylabel=None, ylim=None, metric_name=None, color=None):
 
     fig, ax = plt.subplots(figsize=(15, 4))
@@ -88,80 +86,3 @@ def cnn_model(input_shape=(32, 32, 3)):
     return model
 
 # ##########################################################################
-
-# Load the dataset (CIFAR-10)
-(X_train, y_train), (X_test, y_test) = cifar10.load_data()
-
-print('Learning set:')
-print('X: ', end='')
-print(X_train.shape)
-print('y: ', end='')
-print(y_train.shape)
-
-print('Test set:')
-print('X: ', end='')
-print(X_test.shape)
-print('y: ', end='')
-print(y_test.shape)
-
-# DEBUG. Plot some of the images
-plt.figure(figsize=(18, 9))
-
-num_rows = 4
-num_cols = 5
-
-# plot each of the images in the batch and the associated ground truth labels.
-for i in range(num_rows*num_cols):
-    ax = plt.subplot(num_rows, num_cols, i + 1)
-    plt.imshow(X_train[i,:,:])
-    ax.title.set_text(y_train[i,0])
-    plt.axis("off")
-
-# Normalize images to the range [0, 1].
-X_train = X_train.astype("float32") / 255
-X_test  = X_test.astype("float32") / 255
-
-# Change the labels from integer to categorical data.
-print('Original (integer) label for the first training sample: ', y_train[0])
-
-# Convert labels to one-hot encoding.
-y_train = to_categorical(y_train)
-y_test  = to_categorical(y_test)
-
-print('After conversion to categorical one-hot encoded labels: ', y_train[0])
-
-# Create the model.
-model = cnn_model()
-model.summary()
-
-model.compile(optimizer='rmsprop',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'],
-             )
-
-history = model.fit(X_train,
-                    y_train,
-                    batch_size=32,
-                    epochs=10,
-                    verbose=1,
-                    validation_split=.3,
-                   )
-
-
-# Retrieve training results.
-train_loss = history.history["loss"]
-train_acc  = history.history["accuracy"]
-valid_loss = history.history["val_loss"]
-valid_acc  = history.history["val_accuracy"]
-
-plot_results([ train_loss, valid_loss ],
-            ylabel="Loss",
-            ylim = [0.0, 5.0],
-            metric_name=["Training Loss", "Validation Loss"],
-            color=["g", "b"]);
-
-plot_results([ train_acc, valid_acc ],
-            ylabel="Accuracy",
-            ylim = [0.0, 1.0],
-            metric_name=["Training Accuracy", "Validation Accuracy"],
-            color=["g", "b"])
