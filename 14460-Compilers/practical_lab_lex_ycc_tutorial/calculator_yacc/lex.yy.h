@@ -38,7 +38,12 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     NUMBER = 258
+     NUMBER = 258,
+     PLUS = 259,
+     MINUS = 260,
+     TIMES = 261,
+     DIVIDE = 262,
+     EOL = 263
    };
 #endif
 
