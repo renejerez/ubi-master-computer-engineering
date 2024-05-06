@@ -124,6 +124,7 @@ Definition: The ability of two or more systems or components to exchange informa
     <td>HTTP, SNMP,DNS...</td>
     <td></td>
     <td>Presentation</td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
