@@ -106,37 +106,43 @@ Definition: The ability of two or more systems or components to exchange informa
 
 <table>
   <tr>
-    <th>Column 1</th>
-    <th>Column 2</th>
-    <th>Column 3</th>
-    <th>Column 4</th>
+    <th>IOT</th>
+    <th>Protocols</th>
+    <th>TCP/IP</th>
+    <th>OSI</th>
   </tr>
   <tr>
-    <td>Row 1</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>CoAp</td>
+    <td>HTTP, SNMP,DNS...</td>
+    <td>Application</td>
+    <td>Application</td>
   </tr>
   <tr>
-    <td>Row 2</td>
     <td></td>
     <td></td>
     <td></td>
+    <td>Presentation</td>
   </tr>
   <tr>
-    <td>Row 3</td>
     <td></td>
     <td></td>
     <td></td>
+    <td>Session</td>
   </tr>
   <tr>
-    <td>Row 4</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>UDP</td>
+    <td>TCP, UDP</td>
+    <td>Transport</td>
+    <td>Transport</td>
   </tr>
   <tr>
     <td>Row 5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Row 6</td>
     <td></td>
     <td></td>
     <td></td>
