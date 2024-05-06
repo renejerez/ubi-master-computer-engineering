@@ -112,14 +112,14 @@ Definition: The ability of two or more systems or components to exchange informa
     <th>OSI</th>
   </tr>
   <tr>
-    <td>CoAp</td>
-    <td>HTTP, SNMP,DNS...</td>
+    <td></td>
+    <td></td>
     <td>Application</td>
     <td>Application</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
+    <td>CoAp</td>
+    <td>HTTP, SNMP,DNS...</td>
     <td></td>
     <td>Presentation</td>
   </tr>
@@ -136,22 +136,22 @@ Definition: The ability of two or more systems or components to exchange informa
     <td>Transport</td>
   </tr>
   <tr>
-    <td>Row 5</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>IPv6/6LoWPAN</td>
+    <td>IP, ICMP</td>
+    <td>Network</td>
+    <td>Network</td>
   </tr>
   <tr>
-    <td>Row 6</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>IEE 802.15.4</td>
+    <td>IEE 802.11, Ethernet, Bluethooth, USB</td>
+    <td>Access - Link</td>
+    <td>Link</td>
   </tr>
   <tr>
-    <td>Row 6</td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>Access - Physic</td>
+    <td>Physic</td>
   </tr>
 </table>
 
