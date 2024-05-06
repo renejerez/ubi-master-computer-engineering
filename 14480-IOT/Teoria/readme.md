@@ -163,7 +163,10 @@ Definition: The ability of two or more systems or components to exchange informa
   </tr>
 </table>
 
-
+- Application Layer - MQTT(Message Queue Telemetry Transport):
+    - It’s a message protocol optimized for TCP/IP networks
+    - Applied to sensor networks and small mobile devices
+    - The message exchange scheme is based on the publisher-subscriber model and is extremely simple and lightweight
 
 
 # 2. Final Term
