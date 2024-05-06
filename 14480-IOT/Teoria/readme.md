@@ -110,12 +110,14 @@ Definition: The ability of two or more systems or components to exchange informa
     <th>Protocols</th>
     <th>TCP/IP</th>
     <th>OSI</th>
+    <th>Details</th>
   </tr>
   <tr>
     <td></td>
     <td></td>
     <td>Application</td>
     <td>Application</td>
+    <td>responsible for the distribution of the processed and formatted data in applications to the end-users</td>
   </tr>
   <tr>
     <td>CoAp</td>
@@ -128,32 +130,39 @@ Definition: The ability of two or more systems or components to exchange informa
     <td></td>
     <td></td>
     <td>Session</td>
+    <td></td>
   </tr>
   <tr>
     <td>UDP</td>
     <td>TCP, UDP</td>
     <td>Transport</td>
     <td>Transport</td>
+    <td>- enables the communication between the physical layer and processing layer. This communication is implemented via networks namely 5G, Bluetooth, NFC, and RFID</td>
   </tr>
   <tr>
     <td>IPv6/6LoWPAN</td>
     <td>IP, ICMP</td>
     <td>Network</td>
     <td>Network</td>
+    <td>used to enable the connection, transferring, and processing of the gathered data between sensors and devices</td>
   </tr>
   <tr>
     <td>IEE 802.15.4</td>
     <td>IEE 802.11, Ethernet, Bluethooth, USB</td>
     <td>Access - Link</td>
     <td>Link</td>
+    <td></td>
   </tr>
   <tr>
     <td></td>
     <td></td>
     <td>Access - Physic</td>
     <td>Physic</td>
+    <td>also known as the perception layer, is the layer of the “things” in IoT. It is composed of devices or sensors capable of identifying parameters of the environment and other devices or sensors in the network</td>
   </tr>
 </table>
+
+
 
 
 # 2. Final Term
