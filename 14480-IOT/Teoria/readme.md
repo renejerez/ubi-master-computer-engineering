@@ -78,7 +78,7 @@ Definition: The ability of two or more systems or components to exchange informa
 - Types of Interoperability
     - Amoung devices: Exchange informations between devices, Integration of new devices
     - Network: comunnication between differents network's typologies, routing issues, security, optimization, QoS, mobility
-    - Sitatics: sintatic code must be the same amoung systems
+    - Sintatics: sintatic code must be the same amoung systems
     - Semantics: campatibility data model amoung systems, be able for diferents agents or services or applications exchange information
     - Plataform: Be able to exchange information between differents SO or domains
 
@@ -102,23 +102,54 @@ Definition: The ability of two or more systems or components to exchange informa
 
  - Semantic web IOT: To solve semantic interoperability
 
-## 1.5. Lecture 5 - 
+## 1.5. Lecture 5 - – Protocol Stack
+
+<table>
+  <tr>
+    <th>Column 1</th>
+    <th>Column 2</th>
+    <th>Column 3</th>
+    <th>Column 4</th>
+  </tr>
+  <tr>
+    <td>Row 1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Row 2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Row 3</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Row 4</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Row 5</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Row 6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 
 # 2. Final Term
 
 ## 2.1 Overview
-There are two folders:
-    Codes: In this folder we can see all notebooks and General_Functions
-    Virtual Environments: In this folder wwe have all libraries we need to extract data
-    
-## 2.2 Surveys
-Each Survey have a Id,  which we will need to insert for extract 
-    
-## 2.3 Connections
-The extraction came from Qualtrics API, there area about 8 functions with diferents ways to extract.
-
-## 2.4 Start Code
-To start a extraction you will find a file called Start_Example.ipynb and replace your Survey's ID and Days of Extraction
-    
-# 3. Structure of the Surveys
-The extraction will start with 5 files survey_full_data, survey_options, survey_questions, responses_full_data, responses_df
