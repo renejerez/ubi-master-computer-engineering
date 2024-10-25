@@ -1,7 +1,7 @@
 def summary_create(sections, parent_index="", level=1):
     toc_html = ""
     if level == 1:
-        toc_html += '<h1>Scraping Scores and Number of Reviews<span class="tocSkip"></span></h1>\n<div class="toc">\n  <ul class="toc-item">\n'
+        toc_html += '<h1>Title of your summary<span class="tocSkip"></span></h1>\n<div class="toc">\n  <ul class="toc-item">\n'
 
     for i, (section_title, subsections) in enumerate(sections, start=1):
         current_index = f"{parent_index}{i}" if parent_index else str(i)
